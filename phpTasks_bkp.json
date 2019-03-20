@@ -1,0 +1,72 @@
+{"tasks": [
+    {
+        "authorLogin": "pronskiy",
+        "taskId": "0-0",
+        "taskName": "Hello World",
+        "fileName": "HelloWorld.php",
+        "initialCode": "<?php\n\nclass DeleteMethod\n{\n    public function unusedMethod()\n    {\n        //this method is not used any more\n    }\n}",
+        "initialOffset": 7,
+        "targetCode": "<?php\n\nclass DeleteMethod\n{\n}",
+        "hint": ""
+    },
+    {
+        "authorLogin": "pronskiy",
+        "taskId": "0-1",
+        "taskName": "Print'em all",
+        "fileName": "PrintEmAll.php",
+        "initialCode": "<?php\n\n$arr = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($arr as &$value) {\n    echo $value . \"\\n\";   // print only odd numbers\n}",
+        "initialOffset": 27,
+        "targetCode": "<?php\n\n$arr = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($arr as &$value) {\n    if ($value % 2 == 0) {\n        echo $value . \"\\n\";   // print only odd numbers\n    }\n}",
+        "hint": ""
+    },
+    {
+        "authorLogin": "bzixilu",
+        "taskId": "0-2",
+        "taskName": "Print only odd numbers",
+        "fileName": "Odd.php",
+        "initialCode": "<?php\n\n$arr = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($arr as &$value) {\n    echo $value . \"\\n\";   // print only odd numbers\n}",
+        "initialOffset": 45,
+        "targetCode": "<?php\n\n$arr = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($arr as &$value) {\n    if ($value % 2 == 0) {\n        echo $value . \"\\n\";   // print only odd numbers\n    }\n}",
+        "hint": ""
+    },
+    {
+        "authorLogin": "bzixilu",
+        "taskId": "0-3",
+        "taskName": "Delete unused method",
+        "fileName": "DeleteMethod.php",
+        "initialCode": "<?php\n\nclass DeleteMethod\n{\n    public function unusedMethod()\n    {\n        //this method is not used any more\n    }\n}",
+        "initialOffset": 45,
+        "targetCode": "<?php\n\nclass DeleteMethod\n{\n}",
+        "hint": ""
+    },
+    {
+        "authorLogin": "pronskiy",
+        "taskId": "0-4",
+        "taskName": "NavigateDown",
+        "fileName": "NavigateDown.php",
+        "initialCode": "<?php\n\n$arr = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($arr as &$value) {\n    echo $value . \"\\n\";   // print only odd numbers\n}",
+        "initialOffset": 0,
+        "targetCode": "<?php\n\n$arr = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($arr as &$value) {\n    if ($value % 2 == 0) {\n        echo $value . \"\\n\";   // print only odd numbers\n    }\n}",
+        "hint": ""
+    },
+    {
+        "authorLogin": "pronskiy",
+        "taskId": "0-5",
+        "taskName": "Immutable DTO",
+        "fileName": "ImmutableDTO.php",
+        "initialCode": "<?php\n\n$arr = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($arr as &$value) {\n    echo $value . \"\\n\";   // print only odd numbers\n}",
+        "initialOffset": 45,
+        "targetCode": "<?php\n\n$arr = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($arr as &$value) {\n    if ($value % 2 == 0) {\n        echo $value . \"\\n\";   // print only odd numbers\n    }\n}",
+        "hint": ""
+    },
+    {
+        "authorLogin": "pronskiy",
+        "taskId": "0-6",
+        "taskName": "HTTP Request",
+        "fileName": "GetRequest.http",
+        "initialCode": "<?php\n\n$arr = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($arr as &$value) {\n    echo $value . \"\\n\";   // print only odd numbers\n}",
+        "initialOffset": 0,
+        "targetCode": "<?php\n\n$arr = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($arr as &$value) {\n    if ($value % 2 == 0) {\n        echo $value . \"\\n\";   // print only odd numbers\n    }\n}",
+        "hint": ""
+    }
+]}

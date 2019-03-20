@@ -1,0 +1,74 @@
+{
+    "tasks": [
+        {
+            "authorLogin": "pronskiy",
+            "taskId": "0-0",
+            "taskName": "Hello World",
+            "fileName": "HelloWorld.php",
+            "initialCode": "<?php\n\n",
+            "initialOffset": 7,
+            "targetCode": "<?php\n\necho 'Hello world!';\n",
+            "hint": ""
+        },
+        {
+            "authorLogin": "pronskiy",
+            "taskId": "0-1",
+            "taskName": "Print'em all",
+            "fileName": "PrintEmAll.php",
+            "initialCode": "<?php\n\n$tasks = [];\n\n$tasks\n",
+            "initialOffset": 27,
+            "targetCode": "<?php\n\n$tasks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];\nforeach ($tasks as $task) {\n    echo $task;\n}\n",
+            "hint": ""
+        },
+        {
+            "authorLogin": "bzixilu",
+            "taskId": "0-2",
+            "taskName": "Print only odd numbers",
+            "fileName": "Odd.php",
+            "initialCode": "<?php\n\n$tasks = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($tasks as $task) {\n    echo $task . \"\\n\"; \/\/ print only odd numbers\n}\n",
+            "initialOffset": 45,
+            "targetCode": "<?php\n\n$tasks = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($tasks as $task) {\n    if ($task % 2 == 0) {\n        echo $task . \"\\n\"; \/\/ print only odd numbers\n    }\n}\n",
+            "hint": ""
+        },
+        {
+            "authorLogin": "bzixilu",
+            "taskId": "0-3",
+            "taskName": "Delete unused method",
+            "fileName": "DeleteMethod.php",
+            "initialCode": "<?php\n\nclass DeleteMethod\n{\n    private function unusedMethod() {\n        \/\/this method is not used any more\n    }\n}\n",
+            "initialOffset": 45,
+            "targetCode": "<?php\n\nclass DeleteMethod\n{\n}\n",
+            "hint": ""
+        },
+        {
+            "authorLogin": "pronskiy",
+            "taskId": "0-4",
+            "taskName": "NavigateDown",
+            "fileName": "NavigateDown.php",
+            "initialCode": "<?php\n\nclass NavigateDown {\n\/*\nTo be, or not to be: that is the question:\nWhether 'tis nobler in the mind to suffer\nThe slings and arrows of outrageous fortune,\nOr to take arms against a sea of troubles,\nAnd by opposing end them? To die: to sleep;\nNo more; and by a sleep to say we end\nThe heart-ache and the thousand natural shocks\nThat flesh is heir to, 'tis a consummation\nDevoutly to be wish'd. To die, to sleep;\nTo sleep: perchance to dream: ay, there's the rub;\nFor in that sleep of death what dreams may come\nWhen we have shuffled off this mortal coil,\nMust give us pause: there's the respect\nThat makes calamity of so long life;\nFor who would bear the whips and scorns of time,\nThe oppressor's wrong, the proud man's contumely,\nThe pangs of despised love, the law's delay,\nThe insolence of office and the spurns\nThat patient merit of the unworthy takes,\nWhen he himself might his quietus make\nWith a bare bodkin? who would fardels bear,\nTo grunt and sweat under a weary life,\nBut that the dread of something after death,\nThe undiscover'd country from whose bourn\nNo traveller returns, puzzles the will\nAnd makes us rather bear those ills we have\nThan fly to others that we know not of?\nThus conscience does make cowards of us all;\nAnd thus the native hue of resolution\nIs sicklied o'er with the pale cast of thought,\nAnd enterprises of great pith and moment\nWith this regard their current turn awry,\nAnd lose the name of action. - Soft you now!\nThe fair Ophelia! Nymph, in thy orisons\nBe all my sins remember'd.\n*\/\n}\n",
+            "initialOffset": 0,
+            "targetCode": "<?php\n\nclass NavigateDown {\n    \/*\n    To be, or not to be: that is the question:\n    Whether 'tis nobler in the mind to suffer\n    The slings and arrows of outrageous fortune,\n    Or to take arms against a sea of troubles,\n    And by opposing end them? To die: to sleep;\n    No more; and by a sleep to say we end\n    The heart-ache and the thousand natural shocks\n    That flesh is heir to, 'tis a consummation\n    Devoutly to be wish'd. To die, to sleep;\n    To sleep: perchance to dream: ay, there's the rub;\n    For in that sleep of death what dreams may come\n    When we have shuffled off this mortal coil,\n    Must give us pause: there's the respect\n    That makes calamity of so long life;\n    For who would bear the whips and scorns of time,\n    The oppressor's wrong, the proud man's contumely,\n    The pangs of despised love, the law's delay,\n    The insolence of office and the spurns\n    That patient merit of the unworthy takes,\n    When he himself might his quietus make\n    With a bare bodkin? who would fardels bear,\n    To grunt and sweat under a weary life,\n    But that the dread of something after death,\n    The undiscover'd country from whose bourn\n    No traveller returns, puzzles the will\n    And makes us rather bear those ills we have\n    Than fly to others that we know not of?\n    Thus conscience does make cowards of us all;\n    And thus the native hue of resolution\n    Is sicklied o'er with the pale cast of thought,\n    And enterprises of great pith and moment\n    With this regard their current turn awry,\n    And lose the name of action. - Soft you now!\n    The fair Ophelia! Nymph, in thy orisons\n    Be all my sins remember'd.\n    *\/\n}\n",
+            "hint": ""
+        },
+        {
+            "authorLogin": "pronskiy",
+            "taskId": "0-5",
+            "taskName": "Immutable DTO",
+            "fileName": "ImmutableDTO.php",
+            "initialCode": "<?php\n\nclass Order\n{\n    public $id;\n    public $date;\n}\n",
+            "initialOffset": 45,
+            "targetCode": "<?php\n\nclass Order\n{\n    \/** @var int *\/\n    private $id;\n\n    \/** @var DateTimeImmutable *\/\n    private $date;\n\n    public function __construct(int $id, DateTimeImmutable $date)\n    {\n        $this->id = $id;\n        $this->date = $date;\n    }\n\n    \/**\n     * @return int\n     *\/\n    public function getId(): int\n    {\n        return $this->id;\n    }\n\n    \/**\n     * @return DateTimeImmutable\n     *\/\n    public function getDate(): DateTimeImmutable\n    {\n        return $this->date;\n    }\n}\n",
+            "hint": ""
+        },
+        {
+            "authorLogin": "pronskiy",
+            "taskId": "0-6",
+            "taskName": "HTTP Request",
+            "fileName": "GetRequest.http",
+            "initialCode": "",
+            "initialOffset": 0,
+            "targetCode": "GET http:\/\/httpbin.org\/uuid\nAccept: application\/json\n\n###\n",
+            "hint": ""
+        }
+    ]
+}
