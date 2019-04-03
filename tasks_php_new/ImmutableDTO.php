@@ -2,6 +2,6 @@
 
 class Order
 {
-    public $id;
+    /**/public $id;
     public $date;
 }
