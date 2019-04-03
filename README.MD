@@ -3,7 +3,7 @@ Each tasks is provided in two files:
 * %TaskName%.%ext% – this is what user is given
 * %TaskName%_.%ext% – this is what user needs to achieve
 
-Inside of initial file you may use empty comment as a caret marker `/**/`
+Inside of initial file you may use empty comment as a caret marker `/*caret*/`
 
 Add you task meta description to `phpTasks.json`.
 

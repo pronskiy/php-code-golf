@@ -2,7 +2,7 @@
 
 class DeleteMethod
 {
-    private /**/function unusedMethod() {
+    private /*caret*/function unusedMethod() {
         //this method is not used any more
     }
 }

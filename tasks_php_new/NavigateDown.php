@@ -1,4 +1,4 @@
-/**/<?php
+/*caret*/<?php
 
 class NavigateDown {
 /*

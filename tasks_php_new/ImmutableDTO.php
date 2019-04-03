@@ -2,6 +2,6 @@
 
 class Order
 {
-    /**/public $id;
+    /*caret*/public $id;
     public $date;
 }
