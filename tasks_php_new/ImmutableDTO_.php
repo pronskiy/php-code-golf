@@ -8,6 +8,11 @@ class Order
     /** @var DateTimeImmutable */
     private $date;
 
+    /**
+     * Order constructor.
+     * @param int $id
+     * @param DateTimeImmutable $date
+     */
     public function __construct(int $id, DateTimeImmutable $date)
     {
         $this->id = $id;
