@@ -5,9 +5,9 @@
             "taskId": "0-0",
             "taskName": "Hello World",
             "fileName": "HelloWorld.php",
-            "initialCode": "<?php\n",
-            "initialOffset": 6,
-            "targetCode": "<?php\n\necho 'Hello world!';",
+            "initialCode": "<?php\n\n",
+            "initialOffset": 7,
+            "targetCode": "<?php\n\necho \"Hello world!\";",
             "hint": ""
         },
         {
@@ -26,7 +26,7 @@
             "taskName": "Print only odd numbers",
             "fileName": "Odd.php",
             "initialCode": "<?php\n\n$tasks = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($tasks as $task) {\n    echo $task . \"\\n\";\n}",
-            "initialOffset": 25,
+            "initialOffset": 99,
             "targetCode": "<?php\n\n$tasks = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($tasks as $task) {\n    if ($task % 2 == 0) {\n        echo $task . \"\\n\";\n    }\n}",
             "hint": ""
         },
@@ -45,7 +45,7 @@
             "taskId": "0-5",
             "taskName": "Immutable DTO",
             "fileName": "ImmutableDTO.php",
-            "initialCode": "<?php\n\nclass Order\n{\n    public $id;\n    public $date;\n}",
+            "initialCode": "<?php\n\nclass Order\n{\n    public $id;\n\n    public $date;\n}",
             "initialOffset": 25,
             "targetCode": "<?php\n\nclass Order\n{\n    \/** @var int *\/\n    private $id;\n\n    \/** @var DateTimeImmutable *\/\n    private $date;\n\n    \/**\n     * Order constructor.\n     * @param int $id\n     * @param DateTimeImmutable $date\n     *\/\n    public function __construct(int $id, DateTimeImmutable $date)\n    {\n        $this->id = $id;\n        $this->date = $date;\n    }\n\n    \/**\n     * @return int\n     *\/\n    public function getId(): int\n    {\n        return $this->id;\n    }\n\n    \/**\n     * @return DateTimeImmutable\n     *\/\n    public function getDate(): DateTimeImmutable\n    {\n        return $this->date;\n    }\n}",
             "hint": ""
