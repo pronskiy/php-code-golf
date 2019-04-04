@@ -47,7 +47,7 @@
             "fileName": "ImmutableDTO.php",
             "initialCode": "<?php\n\nclass Order\n{\n    public $id;\n    public $date;\n}",
             "initialOffset": 25,
-            "targetCode": "<?php\n\nclass Order\n{\n    \/** @var int *\/\n    private $id;\n\n    \/** @var DateTimeImmutable *\/\n    private $date;\n\n    public function __construct(int $id, DateTimeImmutable $date)\n    {\n        $this->id = $id;\n        $this->date = $date;\n    }\n\n    \/**\n     * @return int\n     *\/\n    public function getId(): int\n    {\n        return $this->id;\n    }\n\n    \/**\n     * @return DateTimeImmutable\n     *\/\n    public function getDate(): DateTimeImmutable\n    {\n        return $this->date;\n    }\n}",
+            "targetCode": "<?php\n\nclass Order\n{\n    \/** @var int *\/\n    private $id;\n\n    \/** @var DateTimeImmutable *\/\n    private $date;\n\n    \/**\n     * Order constructor.\n     * @param int $id\n     * @param DateTimeImmutable $date\n     *\/\n    public function __construct(int $id, DateTimeImmutable $date)\n    {\n        $this->id = $id;\n        $this->date = $date;\n    }\n\n    \/**\n     * @return int\n     *\/\n    public function getId(): int\n    {\n        return $this->id;\n    }\n\n    \/**\n     * @return DateTimeImmutable\n     *\/\n    public function getDate(): DateTimeImmutable\n    {\n        return $this->date;\n    }\n}",
             "hint": ""
         },
         {
