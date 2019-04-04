@@ -25,9 +25,9 @@
             "taskId": "0-2",
             "taskName": "Print only odd numbers",
             "fileName": "Odd.php",
-            "initialCode": "<?php\n\n$tasks = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($tasks as $task) {\n    echo $task . \"\\n\"; \/\/ print only odd numbers\n}",
+            "initialCode": "<?php\n\n$tasks = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($tasks as $task) {\n    echo $task . \"\\n\";\n}",
             "initialOffset": 25,
-            "targetCode": "<?php\n\n$tasks = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($tasks as $task) {\n    if ($task % 2 == 0) {\n        echo $task . \"\\n\"; \/\/ print only odd numbers\n    }\n}",
+            "targetCode": "<?php\n\n$tasks = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($tasks as $task) {\n    if ($task % 2 == 0) {\n        echo $task . \"\\n\";\n    }\n}",
             "hint": ""
         },
         {
