@@ -65,9 +65,9 @@
             "taskId": "0-7",
             "taskName": "String Juggling",
             "fileName": "StringJuggling.php",
-            "initialCode": "<?php\n\necho 'There are 5 monkeys in the tree';\n\necho sprintf('        The %2$s contains %1$d monkeys.\n    That\\'s a nice %2$s full of %2$s monkeys.', $num, $location);",
+            "initialCode": "<?php\n\necho 'There are 5 monkeys in the tree.';\n\necho sprintf(' The %2$s contains %1$d monkeys.\nThat\\'s a nice %2$s full of %1$d monkeys.', $num, $location);",
             "initialOffset": 12,
-            "targetCode": "<?php\n\n$num = '5';\n$location = 'tree';\necho sprintf(\"There are %s monkeys in the %s\", $num, $location);\n\necho <<<TAG\n        The {$location} contains {$num} monkeys.\n    That's a nice {$location} full of {$num} monkeys.\nTAG;",
+            "targetCode": "<?php\n\n$num = '5';\n$location = 'tree';\necho sprintf(\"There are %s monkeys in the %s\", $num, $location);\n\necho \"The {$location} contains {$num} monkeys.\nThat's a nice {$location} full of {$num} monkeys.\";",
             "hint": ""
         }
     ]
