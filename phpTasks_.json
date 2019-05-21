@@ -1,74 +1,40 @@
 {
     "tasks": [
         {
-            "authorLogin": "pronskiy",
+            "authorLogin": "lene",
             "taskId": "0-0",
-            "taskName": "Hello World",
-            "fileName": "HelloWorld.php",
-            "initialCode": "<?php\n\n",
-            "initialOffset": 7,
-            "targetCode": "<?php\n\necho \"Hello world!\";",
-            "hint": ""
+            "taskName": "Simple: Reuse result",
+            "fileName": "Simple_extract.php",
+            "initialCode": "<?php\n\n$title = getSizeOfBasket() . \" inside\";\n$description = \"There are \" . getSizeOfBasket() . \"in your basket\";\n$promo = \"You have \" . getSizeOfBasket() . \" in your basket. \n    Buy 1 more and get 10% discount!\";\n\nfunction getSizeOfBasket()\n{\n    return sizeof(array(\"Chips\", \"Juice\", \"Ice-cream\"));\n}",
+            "targetCode": "<?php\n\n$size = getSizeOfBasket();\n$title = $size . \" inside\";\n$description = \"There are \" . $size . \"in your basket\";\n$promo = \"You have \" . $size . \" in your basket. \n    Buy 1 more and get 10% discount!\";\n\nfunction getSizeOfBasket()\n{\n    return sizeof(array(\"Chips\", \"Juice\", \"Ice-cream\"));\n}",
+            "initialOffset": 16
         },
         {
-            "authorLogin": "pronskiy",
+            "authorLogin": "lene",
             "taskId": "0-1",
-            "taskName": "Print'em all",
-            "fileName": "PrintEmAll.php",
-            "initialCode": "<?php\n\n$tasks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];\n\n$tasks",
-            "initialOffset": 56,
-            "targetCode": "<?php\n\n$tasks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];\n\nforeach ($tasks as $task) {\n    echo $task;\n}",
-            "hint": ""
+            "taskName": "Simple: Generate method",
+            "fileName": "Simple_generate_method.php",
+            "initialCode": "<?php\n\nclass Printer\n{\n    public function printGreeting(string $name)\n    {\n        $this->printText(\"Hello, \".$name);\n    }\n}",
+            "targetCode": "<?php\n\nclass Printer\n{\n    public function printGreeting(string $name)\n    {\n        $this->printText(\"Hello, \" . $name);\n    }\n\n    private function printText(string $string)\n    {\n        echo $string;\n    }\n}",
+            "initialOffset": 92
         },
         {
-            "authorLogin": "bzixilu",
+            "authorLogin": "lene",
             "taskId": "0-2",
-            "taskName": "Print only odd numbers",
-            "fileName": "Odd.php",
-            "initialCode": "<?php\n\n$tasks = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($tasks as $task) {\n    echo $task . \"\\n\";\n}",
-            "initialOffset": 99,
-            "targetCode": "<?php\n\n$tasks = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($tasks as $task) {\n    if ($task % 2 == 0) {\n        echo $task . \"\\n\";\n    }\n}",
-            "hint": ""
+            "taskName": "Simple: Implement interface",
+            "fileName": "Simple_implement_interface.php",
+            "initialCode": "<?php\n\ninterface WorldSaver\n{\n    public function makeEverythingWork();\n\n    public function readUsersMind($user);\n\n    public function implementUsersDreams();\n}\n\nclass Developer implements WorldSaver\n{\n\n}",
+            "targetCode": "<?php\n\ninterface WorldSaver\n{\n    public function makeEverythingWork();\n\n    public function readUsersMind($user);\n\n    public function implementUsersDreams();\n}\n\nclass Developer implements WorldSaver\/*caret*\/\n{\n\n    public function makeEverythingWork()\n    {\n        \/\/ TODO: Implement makeEverythingWork() method.\n    }\n\n    public function readUsersMind($user)\n    {\n        \/\/ TODO: Implement readUsersMind() method.\n    }\n\n    public function implementUsersDreams()\n    {\n        \/\/ TODO: Implement implementUsersDreams() method.\n    }\n}",
+            "initialOffset": 200
         },
         {
             "authorLogin": "bzixilu",
             "taskId": "0-3",
-            "taskName": "Delete unused method",
+            "taskName": "Simple: Delete unused method",
             "fileName": "DeleteMethod.php",
             "initialCode": "<?php\n\nclass DeleteMethod\n{\n    private function unusedMethod() {\n        \/\/this method is not used any more\n    }\n}",
-            "initialOffset": 40,
             "targetCode": "<?php\n\nclass DeleteMethod\n{\n}",
-            "hint": ""
-        },
-        {
-            "authorLogin": "pronskiy",
-            "taskId": "0-5",
-            "taskName": "Immutable DTO",
-            "fileName": "ImmutableDTO.php",
-            "initialCode": "<?php\n\nclass Order\n{\n    public $id;\n\n    public $date;\n}",
-            "initialOffset": 25,
-            "targetCode": "<?php\n\nclass Order\n{\n    \/** @var int *\/\n    private $id;\n\n    \/** @var DateTimeImmutable *\/\n    private $date;\n\n    \/**\n     * Order constructor.\n     * @param int $id\n     * @param DateTimeImmutable $date\n     *\/\n    public function __construct(int $id, DateTimeImmutable $date)\n    {\n        $this->id = $id;\n        $this->date = $date;\n    }\n\n    \/**\n     * @return int\n     *\/\n    public function getId(): int\n    {\n        return $this->id;\n    }\n\n    \/**\n     * @return DateTimeImmutable\n     *\/\n    public function getDate(): DateTimeImmutable\n    {\n        return $this->date;\n    }\n}",
-            "hint": ""
-        },
-        {
-            "authorLogin": "pronskiy",
-            "taskId": "0-6",
-            "taskName": "HTTP Request",
-            "fileName": "GetRequest.http",
-            "initialCode": "",
-            "initialOffset": 0,
-            "targetCode": "GET http:\/\/httpbin.org\/uuid\nAccept: application\/json\n\n###",
-            "hint": ""
-        },
-        {
-            "authorLogin": "pronskiy",
-            "taskId": "0-7",
-            "taskName": "String Juggling",
-            "fileName": "StringJuggling.php",
-            "initialCode": "<?php\n\necho 'There are 5 monkeys in the tree.';\n\necho sprintf('The %2$s contains %1$d monkeys.\nThat\\'s a nice %2$s full of %1$d monkeys.', $num, $location);",
-            "initialOffset": 12,
-            "targetCode": "<?php\n\n$num = '5';\n$location = 'tree';\necho sprintf(\"There are %s monkeys in the %s.\", $num, $location);\n\necho \"The {$location} contains {$num} monkeys.\nThat's a nice {$location} full of {$num} monkeys.\";",
-            "hint": ""
+            "initialOffset": 40
         }
     ]
 }
