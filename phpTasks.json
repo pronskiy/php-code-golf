@@ -43,10 +43,34 @@
       "fileName": "Simple_cleanup.php"
     },
     {
+      "authorLogin": "pronskiy",
+      "taskId": "0-7",
+      "taskName": "Simple: HTTP Request",
+      "fileName": "GetRequest.http"
+    },
+    {
+      "authorLogin": "bzixilu",
+      "taskId": "0-8",
+      "taskName": "Simple: Surround with condition",
+      "fileName": "Odd.php"
+    },
+    {
       "authorLogin": "lene",
-      "taskId": "0-10",
+      "taskId": "0-9",
+      "taskName": "Simple: Template",
+      "fileName": "Simple_template.php"
+    },
+    {
+      "authorLogin": "lene",
+      "taskId": "0-20",
       "taskName": "New parameter",
       "fileName": "NewParameter.php"
+    },
+    {
+      "authorLogin": "pronskiy",
+      "taskId": "0-21",
+      "taskName": "String Juggling",
+      "fileName": "StringJuggling.php"
     }
   ]
 }
