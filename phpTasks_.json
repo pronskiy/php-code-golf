@@ -35,6 +35,42 @@
             "initialCode": "<?php\n\nclass DeleteMethod\n{\n    private function unusedMethod() {\n        \/\/this method is not used any more\n    }\n}",
             "targetCode": "<?php\n\nclass DeleteMethod\n{\n}",
             "initialOffset": 40
+        },
+        {
+            "authorLogin": "lene",
+            "taskId": "0-4",
+            "taskName": "Simple: Import namespace",
+            "fileName": "Simple_namespace.php",
+            "initialCode": "<?php\n\nnamespace CurrentNamespace {\n    new ClassINeed;\n}\n\nnamespace FancyNamespaceWithTooManySymbolsInName {\n    class ClassINeed\n    {\n    }\n}",
+            "targetCode": "<?php\n\nnamespace CurrentNamespace {\n\n    use FancyNamespaceWithTooManySymbolsInName\\ClassINeed;\n\n    new ClassINeed;\n}\n\nnamespace FancyNamespaceWithTooManySymbolsInName {\n    class ClassINeed\n    {\n    }\n}",
+            "initialOffset": 54
+        },
+        {
+            "authorLogin": "lene",
+            "taskId": "0-5",
+            "taskName": "Simple: Update PHPDoc",
+            "fileName": "Simple_update_phpdoc.php",
+            "initialCode": "<?php\n\n\/**\n * @param array $params\n *\/\nfunction changedFunction(array $params, int $index): float\n{\n    if ($index < 0) {\n        throw new Exception($index);\n    }\n    return $params[$index];\n}",
+            "targetCode": "<?php\n\n\/**\n * @param array $params\n * @param int $index\n * @return float\n * @throws Exception\n *\/\nfunction changedFunction(array $params, int $index): float\n{\n    if ($index < 0) {\n        throw new Exception($index);\n    }\n    return $params[$index];\n}",
+            "initialOffset": 38
+        },
+        {
+            "authorLogin": "lene",
+            "taskId": "0-6",
+            "taskName": "Simple: Cleanup FQNs",
+            "fileName": "Simple_cleanup.php",
+            "initialCode": "<?php\n\nnamespace Impl {\n    function handle(): \\Some\\Very\\Long\\Name\\Entity\n    {\n       return new \\Some\\Very\\Long\\\\*caret*\\Name\\Element();\n    }\n}\n\nnamespace Some\\Very\\Long\\Name {\n    interface Entity\n    {\n    }\n\n    class Element implements Entity\n    {\n    }\n}",
+            "targetCode": "<?php\n\nnamespace Impl {\n\n    use Some\\Very\\Long\\Name\\Element;\n    use Some\\Very\\Long\\Name\\Entity;\n\n    function handle(): Entity\n    {\n        return new Element();\n    }\n}\n\nnamespace Some\\Very\\Long\\Name {\n    interface Entity\n    {\n    }\n\n    class Element implements Entity\n    {\n    }\n}",
+            "initialOffset": false
+        },
+        {
+            "authorLogin": "lene",
+            "taskId": "0-10",
+            "taskName": "New parameter",
+            "fileName": "NewParameter.php",
+            "initialCode": "<?php\n\nnamespace Importer {\n    class Importer\n    {\n        public function __construct(\\Importable\\ImportMe $class)\n        {\n        }\n    }\n}\n\n\nnamespace Importable {\n    class ImportMe\n    {\n\n    }\n}",
+            "targetCode": "<?php\n\nnamespace Importer {\n\n    use Importable\\ImportMe;\n\n    class Importer\n    {\n        \/**\n         * @var ImportMe\n         *\/\n        private $class;\n\n        \/**\n         * Importer constructor.\n         * @param ImportMe $class\n         *\/\n        public function __construct(ImportMe $class)\n        {\n            $this->class = $class;\n        }\n    }\n}\n\n\nnamespace Importable {\n    class ImportMe\n    {\n\n    }\n}",
+            "initialOffset": 101
         }
     ]
 }

@@ -23,6 +23,30 @@
       "taskId": "0-3",
       "taskName": "Simple: Delete unused method",
       "fileName": "DeleteMethod.php"
+    },
+    {
+      "authorLogin": "lene",
+      "taskId": "0-4",
+      "taskName": "Simple: Import namespace",
+      "fileName": "Simple_namespace.php"
+    },
+    {
+      "authorLogin": "lene",
+      "taskId": "0-5",
+      "taskName": "Simple: Update PHPDoc",
+      "fileName": "Simple_update_phpdoc.php"
+    },
+    {
+      "authorLogin": "lene",
+      "taskId": "0-6",
+      "taskName": "Simple: Cleanup FQNs",
+      "fileName": "Simple_cleanup.php"
+    },
+    {
+      "authorLogin": "lene",
+      "taskId": "0-10",
+      "taskName": "New parameter",
+      "fileName": "NewParameter.php"
     }
   ]
 }
