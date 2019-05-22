@@ -5,49 +5,49 @@
       "taskId": "0-0",
       "taskName": "Simple: Reuse result",
       "fileName": "ReuseResult.php",
-      "source": "refactoring/Simple_extract.php"
+      "source": "refactoring/ExtractVariable.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-1",
       "taskName": "Simple: Generate method",
       "fileName": "GenerateMethod.php",
-      "source": "altEnter/Simple_generate_method.php"
+      "source": "altEnter/GenerateMethod.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-2",
       "taskName": "Simple: Implement interface",
       "fileName": "ImplementInterface.php",
-      "source": "altEnter/Simple_implement_interface.php"
+      "source": "altEnter/ImplementInterface.php"
     },
     {
       "authorLogin": "bzixilu",
       "taskId": "0-3",
       "taskName": "Simple: Delete unused method",
-      "fileName": "DeleteMethod.php",
-      "source": "altEnter/DeleteMethod.php"
+      "fileName": "DeleteUnusedMethod.php",
+      "source": "altEnter/DeleteUnusedMethod.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-4",
       "taskName": "Simple: Import namespace",
       "fileName": "ImportNamespace.php",
-      "source": "altEnter/Simple_namespace.php"
+      "source": "altEnter/ImportNamespace.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-5",
       "taskName": "Simple: Update PHPDoc",
       "fileName": "UpdatePHPDoc.php",
-      "source": "altEnter/Simple_update_phpdoc.php"
+      "source": "altEnter/UpdatePHPDoc.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-6",
       "taskName": "Simple: Cleanup FQNs",
       "fileName": "Cleanup.php",
-      "source": "altEnter/Simple_cleanup.php"
+      "source": "altEnter/Cleanup.php"
     },
     {
       "authorLogin": "pronskiy",
@@ -61,21 +61,21 @@
       "taskId": "0-8",
       "taskName": "Simple: Surround with condition",
       "fileName": "Odd.php",
-      "source": "surroundWith/Odd.php"
+      "source": "surroundWith/ConditionOdd.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-9",
-      "taskName": "Simple: Iterate",
-      "fileName": "Iterate.php",
-      "source": "liveTemplates/Simple_template.php"
+      "taskName": "Simple: Foreach",
+      "fileName": "Foreach.php",
+      "source": "liveTemplates/Foreach.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-20",
-      "taskName": "New parameter",
+      "taskName": "Simple: Introduce new parameter",
       "fileName": "NewParameter.php",
-      "source": "altEnter/NewParameter.php"
+      "source": "altEnter/IntroduceNewParameter.php"
     },
     {
       "authorLogin": "pronskiy",
