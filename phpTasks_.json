@@ -59,9 +59,9 @@
             "taskId": "0-6",
             "taskName": "Simple: Cleanup FQNs",
             "fileName": "altEnter\/Simple_cleanup.php",
-            "initialCode": "<?php\n\nnamespace Impl {\n    function handle(): \\Some\\Very\\Long\\Name\\Entity\n    {\n       return new \\Some\\Very\\Long\\\\*caret*\\Name\\Element();\n    }\n}\n\nnamespace Some\\Very\\Long\\Name {\n    interface Entity\n    {\n    }\n\n    class Element implements Entity\n    {\n    }\n}",
+            "initialCode": "<?php\n\nnamespace Impl {\n    function handle(): \\Some\\Very\\Long\\Name\\Entity\n    {\n       return new \\Some\\Very\\Long\\Name\\Element();\n    }\n}\n\nnamespace Some\\Very\\Long\\Name {\n    interface Entity\n    {\n    }\n\n    class Element implements Entity\n    {\n    }\n}",
             "targetCode": "<?php\n\nnamespace Impl {\n\n    use Some\\Very\\Long\\Name\\Element;\n    use Some\\Very\\Long\\Name\\Entity;\n\n    function handle(): Entity\n    {\n        return new Element();\n    }\n}\n\nnamespace Some\\Very\\Long\\Name {\n    interface Entity\n    {\n    }\n\n    class Element implements Entity\n    {\n    }\n}",
-            "initialOffset": false
+            "initialOffset": 115
         },
         {
             "authorLogin": "pronskiy",

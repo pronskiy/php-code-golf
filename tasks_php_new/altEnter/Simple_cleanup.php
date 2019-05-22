@@ -3,7 +3,7 @@
 namespace Impl {
     function handle(): \Some\Very\Long\Name\Entity
     {
-       return new \Some\Very\Long\\*caret*\Name\Element();
+       return new \Some\Very\Long\/*caret*/Name\Element();
     }
 }
 
