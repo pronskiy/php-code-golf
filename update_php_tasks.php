@@ -9,7 +9,8 @@ foreach ($json->tasks as &$task) {
     ['filename' => $filename, 'extension' => $extension] = pathinfo($task->fileName);
 
     $initialFilename = $task->fileName;
-    $targetFilename = sprintf("%s_.%s", $filename, $extension);
+    $targetFilename = substr($initialFilename, 0, strlen($initialFilename) - strlen($filename . "." . $extension)) .
+        sprintf("%s_.%s", $filename, $extension);
 
     $tasksDir = __DIR__ . '/tasks_php_new/';
     $initialCode = trim(file_get_contents($tasksDir . $initialFilename));

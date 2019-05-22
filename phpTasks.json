@@ -4,67 +4,67 @@
       "authorLogin": "lene",
       "taskId": "0-0",
       "taskName": "Simple: Reuse result",
-      "fileName": "Simple_extract.php"
+      "fileName": "refactoring/Simple_extract.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-1",
       "taskName": "Simple: Generate method",
-      "fileName": "Simple_generate_method.php"
+      "fileName": "altEnter/Simple_generate_method.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-2",
       "taskName": "Simple: Implement interface",
-      "fileName": "Simple_implement_interface.php"
+      "fileName": "altEnter/Simple_implement_interface.php"
     },
     {
       "authorLogin": "bzixilu",
       "taskId": "0-3",
       "taskName": "Simple: Delete unused method",
-      "fileName": "DeleteMethod.php"
+      "fileName": "altEnter/DeleteMethod.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-4",
       "taskName": "Simple: Import namespace",
-      "fileName": "Simple_namespace.php"
+      "fileName": "altEnter/Simple_namespace.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-5",
       "taskName": "Simple: Update PHPDoc",
-      "fileName": "Simple_update_phpdoc.php"
+      "fileName": "altEnter/Simple_update_phpdoc.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-6",
       "taskName": "Simple: Cleanup FQNs",
-      "fileName": "Simple_cleanup.php"
+      "fileName": "altEnter/Simple_cleanup.php"
     },
     {
       "authorLogin": "pronskiy",
       "taskId": "0-7",
       "taskName": "Simple: HTTP Request",
-      "fileName": "GetRequest.http"
+      "fileName": "liveTemplates/GetRequest.http"
     },
     {
       "authorLogin": "bzixilu",
       "taskId": "0-8",
       "taskName": "Simple: Surround with condition",
-      "fileName": "Odd.php"
+      "fileName": "surroundWith/Odd.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-9",
       "taskName": "Simple: Template",
-      "fileName": "Simple_template.php"
+      "fileName": "liveTemplates/Simple_template.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-20",
       "taskName": "New parameter",
-      "fileName": "NewParameter.php"
+      "fileName": "altEnter/NewParameter.php"
     },
     {
       "authorLogin": "pronskiy",

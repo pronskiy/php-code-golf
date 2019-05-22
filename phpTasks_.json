@@ -4,7 +4,7 @@
             "authorLogin": "lene",
             "taskId": "0-0",
             "taskName": "Simple: Reuse result",
-            "fileName": "Simple_extract.php",
+            "fileName": "refactoring\/Simple_extract.php",
             "initialCode": "<?php\n\n$title = getSizeOfBasket() . \" inside\";\n$description = \"There are \" . getSizeOfBasket() . \"in your basket\";\n$promo = \"You have \" . getSizeOfBasket() . \" in your basket. \n    Buy 1 more and get 10% discount!\";\n\nfunction getSizeOfBasket()\n{\n    return sizeof(array(\"Chips\", \"Juice\", \"Ice-cream\"));\n}",
             "targetCode": "<?php\n\n$size = getSizeOfBasket();\n$title = $size . \" inside\";\n$description = \"There are \" . $size . \"in your basket\";\n$promo = \"You have \" . $size . \" in your basket. \n    Buy 1 more and get 10% discount!\";\n\nfunction getSizeOfBasket()\n{\n    return sizeof(array(\"Chips\", \"Juice\", \"Ice-cream\"));\n}",
             "initialOffset": 16
@@ -13,7 +13,7 @@
             "authorLogin": "lene",
             "taskId": "0-1",
             "taskName": "Simple: Generate method",
-            "fileName": "Simple_generate_method.php",
+            "fileName": "altEnter\/Simple_generate_method.php",
             "initialCode": "<?php\n\nclass Printer\n{\n    public function printGreeting(string $name)\n    {\n        $this->printText(\"Hello, \".$name);\n    }\n}",
             "targetCode": "<?php\n\nclass Printer\n{\n    public function printGreeting(string $name)\n    {\n        $this->printText(\"Hello, \" . $name);\n    }\n\n    private function printText(string $string)\n    {\n        echo $string;\n    }\n}",
             "initialOffset": 92
@@ -22,7 +22,7 @@
             "authorLogin": "lene",
             "taskId": "0-2",
             "taskName": "Simple: Implement interface",
-            "fileName": "Simple_implement_interface.php",
+            "fileName": "altEnter\/Simple_implement_interface.php",
             "initialCode": "<?php\n\ninterface WorldSaver\n{\n    public function makeEverythingWork();\n\n    public function readUsersMind($user);\n\n    public function implementUsersDreams();\n}\n\nclass Developer implements WorldSaver\n{\n\n}",
             "targetCode": "<?php\n\ninterface WorldSaver\n{\n    public function makeEverythingWork();\n\n    public function readUsersMind($user);\n\n    public function implementUsersDreams();\n}\n\nclass Developer implements WorldSaver\/*caret*\/\n{\n\n    public function makeEverythingWork()\n    {\n        \/\/ TODO: Implement makeEverythingWork() method.\n    }\n\n    public function readUsersMind($user)\n    {\n        \/\/ TODO: Implement readUsersMind() method.\n    }\n\n    public function implementUsersDreams()\n    {\n        \/\/ TODO: Implement implementUsersDreams() method.\n    }\n}",
             "initialOffset": 200
@@ -31,7 +31,7 @@
             "authorLogin": "bzixilu",
             "taskId": "0-3",
             "taskName": "Simple: Delete unused method",
-            "fileName": "DeleteMethod.php",
+            "fileName": "altEnter\/DeleteMethod.php",
             "initialCode": "<?php\n\nclass DeleteMethod\n{\n    private function unusedMethod() {\n        \/\/this method is not used any more\n    }\n}",
             "targetCode": "<?php\n\nclass DeleteMethod\n{\n}",
             "initialOffset": 40
@@ -40,7 +40,7 @@
             "authorLogin": "lene",
             "taskId": "0-4",
             "taskName": "Simple: Import namespace",
-            "fileName": "Simple_namespace.php",
+            "fileName": "altEnter\/Simple_namespace.php",
             "initialCode": "<?php\n\nnamespace CurrentNamespace {\n    new ClassINeed;\n}\n\nnamespace FancyNamespaceWithTooManySymbolsInName {\n    class ClassINeed\n    {\n    }\n}",
             "targetCode": "<?php\n\nnamespace CurrentNamespace {\n\n    use FancyNamespaceWithTooManySymbolsInName\\ClassINeed;\n\n    new ClassINeed;\n}\n\nnamespace FancyNamespaceWithTooManySymbolsInName {\n    class ClassINeed\n    {\n    }\n}",
             "initialOffset": 54
@@ -49,7 +49,7 @@
             "authorLogin": "lene",
             "taskId": "0-5",
             "taskName": "Simple: Update PHPDoc",
-            "fileName": "Simple_update_phpdoc.php",
+            "fileName": "altEnter\/Simple_update_phpdoc.php",
             "initialCode": "<?php\n\n\/**\n * @param array $params\n *\/\nfunction changedFunction(array $params, int $index): float\n{\n    if ($index < 0) {\n        throw new Exception($index);\n    }\n    return $params[$index];\n}",
             "targetCode": "<?php\n\n\/**\n * @param array $params\n * @param int $index\n * @return float\n * @throws Exception\n *\/\nfunction changedFunction(array $params, int $index): float\n{\n    if ($index < 0) {\n        throw new Exception($index);\n    }\n    return $params[$index];\n}",
             "initialOffset": 38
@@ -58,7 +58,7 @@
             "authorLogin": "lene",
             "taskId": "0-6",
             "taskName": "Simple: Cleanup FQNs",
-            "fileName": "Simple_cleanup.php",
+            "fileName": "altEnter\/Simple_cleanup.php",
             "initialCode": "<?php\n\nnamespace Impl {\n    function handle(): \\Some\\Very\\Long\\Name\\Entity\n    {\n       return new \\Some\\Very\\Long\\\\*caret*\\Name\\Element();\n    }\n}\n\nnamespace Some\\Very\\Long\\Name {\n    interface Entity\n    {\n    }\n\n    class Element implements Entity\n    {\n    }\n}",
             "targetCode": "<?php\n\nnamespace Impl {\n\n    use Some\\Very\\Long\\Name\\Element;\n    use Some\\Very\\Long\\Name\\Entity;\n\n    function handle(): Entity\n    {\n        return new Element();\n    }\n}\n\nnamespace Some\\Very\\Long\\Name {\n    interface Entity\n    {\n    }\n\n    class Element implements Entity\n    {\n    }\n}",
             "initialOffset": false
@@ -67,7 +67,7 @@
             "authorLogin": "pronskiy",
             "taskId": "0-7",
             "taskName": "Simple: HTTP Request",
-            "fileName": "GetRequest.http",
+            "fileName": "liveTemplates\/GetRequest.http",
             "initialCode": "",
             "targetCode": "GET http:\/\/httpbin.org\/uuid\nAccept: application\/json\n\n###",
             "initialOffset": 0
@@ -76,7 +76,7 @@
             "authorLogin": "bzixilu",
             "taskId": "0-8",
             "taskName": "Simple: Surround with condition",
-            "fileName": "Odd.php",
+            "fileName": "surroundWith\/Odd.php",
             "initialCode": "<?php\n\n$tasks = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($tasks as $task) {\n    echo $task . \"\\n\";\n}",
             "targetCode": "<?php\n\n$tasks = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\nforeach ($tasks as $task) {\n    if ($task % 2 == 0) {\n        echo $task . \"\\n\";\n    }\n}",
             "initialOffset": 99
@@ -85,7 +85,7 @@
             "authorLogin": "lene",
             "taskId": "0-9",
             "taskName": "Simple: Template",
-            "fileName": "Simple_template.php",
+            "fileName": "liveTemplates\/Simple_template.php",
             "initialCode": "<?php\n\n$tasks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];\n\n",
             "targetCode": "<?php\n\n$tasks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];\n\nforeach ($tasks as $item) {\n    echo \"Got $item\";\n}",
             "initialOffset": 50
@@ -94,7 +94,7 @@
             "authorLogin": "lene",
             "taskId": "0-20",
             "taskName": "New parameter",
-            "fileName": "NewParameter.php",
+            "fileName": "altEnter\/NewParameter.php",
             "initialCode": "<?php\n\nnamespace Importer {\n    class Importer\n    {\n        public function __construct(\\Importable\\ImportMe $class)\n        {\n        }\n    }\n}\n\n\nnamespace Importable {\n    class ImportMe\n    {\n\n    }\n}",
             "targetCode": "<?php\n\nnamespace Importer {\n\n    use Importable\\ImportMe;\n\n    class Importer\n    {\n        \/**\n         * @var ImportMe\n         *\/\n        private $class;\n\n        \/**\n         * Importer constructor.\n         * @param ImportMe $class\n         *\/\n        public function __construct(ImportMe $class)\n        {\n            $this->class = $class;\n        }\n    }\n}\n\n\nnamespace Importable {\n    class ImportMe\n    {\n\n    }\n}",
             "initialOffset": 101
