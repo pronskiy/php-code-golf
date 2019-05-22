@@ -4,73 +4,85 @@
       "authorLogin": "lene",
       "taskId": "0-0",
       "taskName": "Simple: Reuse result",
-      "fileName": "refactoring/Simple_extract.php"
+      "fileName": "ReuseResult.php",
+      "source": "refactoring/Simple_extract.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-1",
       "taskName": "Simple: Generate method",
-      "fileName": "altEnter/Simple_generate_method.php"
+      "fileName": "GenerateMethod.php",
+      "source": "altEnter/Simple_generate_method.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-2",
       "taskName": "Simple: Implement interface",
-      "fileName": "altEnter/Simple_implement_interface.php"
+      "fileName": "ImplementInterface.php",
+      "source": "altEnter/Simple_implement_interface.php"
     },
     {
       "authorLogin": "bzixilu",
       "taskId": "0-3",
       "taskName": "Simple: Delete unused method",
-      "fileName": "altEnter/DeleteMethod.php"
+      "fileName": "DeleteMethod.php",
+      "source": "altEnter/DeleteMethod.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-4",
       "taskName": "Simple: Import namespace",
-      "fileName": "altEnter/Simple_namespace.php"
+      "fileName": "ImportNamespace.php",
+      "source": "altEnter/Simple_namespace.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-5",
       "taskName": "Simple: Update PHPDoc",
-      "fileName": "altEnter/Simple_update_phpdoc.php"
+      "fileName": "UpdatePHPDoc.php",
+      "source": "altEnter/Simple_update_phpdoc.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-6",
       "taskName": "Simple: Cleanup FQNs",
-      "fileName": "altEnter/Simple_cleanup.php"
+      "fileName": "Cleanup.php",
+      "source": "altEnter/Simple_cleanup.php"
     },
     {
       "authorLogin": "pronskiy",
       "taskId": "0-7",
       "taskName": "Simple: HTTP Request",
-      "fileName": "liveTemplates/GetRequest.http"
+      "fileName": "GetRequest.http",
+      "source": "liveTemplates/GetRequest.http"
     },
     {
       "authorLogin": "bzixilu",
       "taskId": "0-8",
       "taskName": "Simple: Surround with condition",
-      "fileName": "surroundWith/Odd.php"
+      "fileName": "Odd.php",
+      "source": "surroundWith/Odd.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-9",
-      "taskName": "Simple: Template",
-      "fileName": "liveTemplates/Simple_template.php"
+      "taskName": "Simple: Iterate",
+      "fileName": "Iterate.php",
+      "source": "liveTemplates/Simple_template.php"
     },
     {
       "authorLogin": "lene",
       "taskId": "0-20",
       "taskName": "New parameter",
-      "fileName": "altEnter/NewParameter.php"
+      "fileName": "NewParameter.php",
+      "source": "altEnter/NewParameter.php"
     },
     {
       "authorLogin": "pronskiy",
       "taskId": "0-21",
       "taskName": "String Juggling",
-      "fileName": "StringJuggling.php"
+      "fileName": "StringJuggling.php",
+      "source": "StringJuggling.php"
     }
   ]
 }
