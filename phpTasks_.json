@@ -24,7 +24,7 @@
             "taskName": "Simple: Implement interface",
             "fileName": "ImplementInterface.php",
             "initialCode": "<?php\n\ninterface WorldSaver\n{\n    public function makeEverythingWork();\n\n    public function readUsersMind($user);\n\n    public function implementUsersDreams();\n}\n\nclass Developer implements WorldSaver\n{\n\n}",
-            "targetCode": "<?php\n\ninterface WorldSaver\n{\n    public function makeEverythingWork();\n\n    public function readUsersMind($user);\n\n    public function implementUsersDreams();\n}\n\nclass Developer implements WorldSaver\/*caret*\/\n{\n\n    public function makeEverythingWork()\n    {\n        \/\/ TODO: Implement makeEverythingWork() method.\n    }\n\n    public function readUsersMind($user)\n    {\n        \/\/ TODO: Implement readUsersMind() method.\n    }\n\n    public function implementUsersDreams()\n    {\n        \/\/ TODO: Implement implementUsersDreams() method.\n    }\n}",
+            "targetCode": "<?php\n\ninterface WorldSaver\n{\n    public function makeEverythingWork();\n\n    public function readUsersMind($user);\n\n    public function implementUsersDreams();\n}\n\nclass Developer implements WorldSaver\n{\n\n    public function makeEverythingWork()\n    {\n        \/\/ TODO: Implement makeEverythingWork() method.\n    }\n\n    public function readUsersMind($user)\n    {\n        \/\/ TODO: Implement readUsersMind() method.\n    }\n\n    public function implementUsersDreams()\n    {\n        \/\/ TODO: Implement implementUsersDreams() method.\n    }\n}",
             "initialOffset": 200
         },
         {
