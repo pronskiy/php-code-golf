@@ -57,18 +57,18 @@
       "source": "liveTemplates/GetRequest.http"
     },
     {
-      "authorLogin": "bzixilu",
-      "taskId": "0-8",
-      "taskName": "Simple: Surround with condition",
-      "fileName": "Odd.php",
-      "source": "surroundWith/ConditionOdd.php"
-    },
-    {
       "authorLogin": "lene",
-      "taskId": "0-9",
+      "taskId": "0-8",
       "taskName": "Simple: Foreach",
       "fileName": "Foreach.php",
       "source": "liveTemplates/Foreach.php"
+    },
+    {
+      "authorLogin": "bzixilu",
+      "taskId": "0-9",
+      "taskName": "Simple: Surround with condition",
+      "fileName": "Odd.php",
+      "source": "surroundWith/ConditionOdd.php"
     },
     {
       "authorLogin": "lene",

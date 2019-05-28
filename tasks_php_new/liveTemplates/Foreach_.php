@@ -2,6 +2,6 @@
 
 $tasks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-foreach ($tasks as $item) {
-    echo "Got $item";
+foreach ($tasks as $task) {
+    echo "Got $task";
 }
