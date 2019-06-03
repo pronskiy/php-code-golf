@@ -102,11 +102,20 @@
         {
             "authorLogin": "pronskiy",
             "taskId": "0-21",
-            "taskName": "String Juggling",
+            "taskName": "Medium: String Juggling",
             "fileName": "StringJuggling.php",
             "initialCode": "<?php\n\necho 'There are 5 monkeys in the tree.';\n\necho sprintf('The %2$s contains %1$d monkeys.\nThat\\'s a nice %2$s full of %1$d monkeys.', $num, $location);",
             "targetCode": "<?php\n\n$num = '5';\n$location = 'tree';\necho sprintf(\"There are %s monkeys in the %s.\", $num, $location);\n\necho \"The {$location} contains {$num} monkeys.\nThat's a nice {$location} full of {$num} monkeys.\";",
             "initialOffset": 12
+        },
+        {
+            "authorLogin": "pronskiy",
+            "taskId": "0-22",
+            "taskName": "Medium: ToDo List",
+            "fileName": "TodoList.php",
+            "initialCode": "<?php\n\nnamespace CodeGolfTodo;\n\nclass Item\n{\n    public string $id;\n    public string $title;\n    public bool $done = false;\n\n    public function __construct(string $title)\n    {\n        $this->id = uniqid('', true);\n        $this->title = $title;\n    }\n\n    public function __toString(): string\n    {\n        return \"[\" . ($this->done ? 'x' : ' ') . \"] \" . $this->title . \" (\" . $this->id . \")\";\n    }\n}\n\nclass TodoList\n{\n    private $items = array();\n}",
+            "targetCode": "<?php\n\nnamespace CodeGolfTodo;\n\nclass Item\n{\n    \/\/region Properties\n    public string $id;\n    public string $description;\n    public bool $done = false;\n    \/\/endregion\n\n    public function __construct(string $description)\n    {\n        $this->id = uniqid('', true);\n        $this->description = $description;\n    }\n\n    public function __toString(): string\n    {\n        $mark = $this->done ? 'x' : ' ';\n        return sprintf(\"[%s] %s (%s)\", $mark, $this->description, $this->id);\n    }\n}\n\nclass TodoList\n{\n    private $items = [];\n\n    public function add(Item $item)\n    {\n        $this->items[$item->id] = $item;\n    }\n\n    public function print()\n    {\n        foreach ($this->items as $item) {\n            echo $item, \"\\n\";\n        }\n    }\n}",
+            "initialOffset": 42
         }
     ]
 }
