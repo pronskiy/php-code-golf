@@ -87,9 +87,16 @@
     {
       "authorLogin": "pronskiy",
       "taskId": "0-22",
-      "taskName": "Medium: ToDo List",
-      "fileName": "TodoList.php",
-      "source": "TodoList.php"
+      "taskName": "Medium: Immutable DTO",
+      "fileName": "ImmutableDTO.php",
+      "source": "ImmutableDTO.php"
+    },
+    {
+      "authorLogin": "pronskiy",
+      "taskId": "0-23",
+      "taskName": "Medium: Service Injection",
+      "fileName": "ServiceInjection.php",
+      "source": "ServiceInjection.php"
     }
   ]
 }
