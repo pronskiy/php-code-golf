@@ -12,7 +12,7 @@ class Controller
 
     public function action()
     {
-        $service/*caret*/->process($order);
+        $servi/*caret*/ce->process($order);
     }
 }
 

@@ -124,7 +124,7 @@
             "fileName": "ServiceInjection.php",
             "initialCode": "<?php\nnamespace ServiceInjection;\n\nclass Controller\n{\n    \/**\n     * Controller constructor.\n     *\/\n    public function __construct()\n    {\n    }\n\n    public function action()\n    {\n        $service->process($order);\n    }\n}\n\nclass Service\n{\n    public function process(Order $order)\n    {\n        \/\/ =^_^= \\\\\n    }\n}\n\nclass Order {}",
             "targetCode": "<?php\nnamespace ServiceInjection;\n\nclass Controller\n{\n    \/** @var Service *\/\n    private $service;\n\n    \/**\n     * Controller constructor.\n     * @param Service $service\n     *\/\n    public function __construct(Service $service)\n    {\n        $this->service = $service;\n    }\n\n    public function action($order)\n    {\n        $this->service->process($order);\n    }\n}\n\nclass Service\n{\n    public function process(Order $order)\n    {\n        \/\/ =^_^= \\\\\n    }\n}\n\nclass Order {}",
-            "initialOffset": 199
+            "initialOffset": 197
         }
     ]
 }
