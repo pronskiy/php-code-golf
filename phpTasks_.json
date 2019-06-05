@@ -14,7 +14,7 @@
             "taskId": "0-1",
             "taskName": "Simple: Generate method",
             "fileName": "GenerateMethod.php",
-            "initialCode": "<?php\n\nclass Printer\n{\n    public function printGreeting(string $name)\n    {\n        $this->printText(\"Hello, \".$name);\n    }\n}",
+            "initialCode": "<?php\n\nclass Printer\n{\n    public function printGreeting(string $name)\n    {\n        $this->printText(\"Hello, \" . $name);\n    }\n}",
             "targetCode": "<?php\n\nclass Printer\n{\n    public function printGreeting(string $name)\n    {\n        $this->printText(\"Hello, \" . $name);\n    }\n\n    private function printText(string $string)\n    {\n        echo $string;\n    }\n}",
             "initialOffset": 92
         },
@@ -23,9 +23,9 @@
             "taskId": "0-2",
             "taskName": "Simple: Implement interface",
             "fileName": "ImplementInterface.php",
-            "initialCode": "<?php\n\ninterface WorldSaver\n{\n    public function makeEverythingWork();\n\n    public function readUsersMind($user);\n\n    public function implementUsersDreams();\n}\n\nclass Developer implements WorldSaver\n{\n\n}",
+            "initialCode": "<?php\n\ninterface WorldSaver\n{\n    public function makeEverythingWork();\n\n    public function readUsersMind($user);\n\n    public function implementUsersDreams();\n}\n\nclass Developer implements \n{\n\n}",
             "targetCode": "<?php\n\ninterface WorldSaver\n{\n    public function makeEverythingWork();\n\n    public function readUsersMind($user);\n\n    public function implementUsersDreams();\n}\n\nclass Developer implements WorldSaver\n{\n\n    public function makeEverythingWork()\n    {\n        \/\/ TODO: Implement makeEverythingWork() method.\n    }\n\n    public function readUsersMind($user)\n    {\n        \/\/ TODO: Implement readUsersMind() method.\n    }\n\n    public function implementUsersDreams()\n    {\n        \/\/ TODO: Implement implementUsersDreams() method.\n    }\n}",
-            "initialOffset": 200
+            "initialOffset": 190
         },
         {
             "authorLogin": "bzixilu",
@@ -34,7 +34,7 @@
             "fileName": "DeleteUnusedMethod.php",
             "initialCode": "<?php\n\nclass DeleteUnusedMethod\n{\n    private function unusedMethod() {\n        \/\/this method is not used any more\n    }\n}",
             "targetCode": "<?php\n\nclass DeleteUnusedMethod\n{\n}",
-            "initialOffset": 46
+            "initialOffset": 55
         },
         {
             "authorLogin": "lene",
@@ -122,8 +122,8 @@
             "taskId": "0-23",
             "taskName": "Medium: Service Injection",
             "fileName": "ServiceInjection.php",
-            "initialCode": "<?php\nnamespace ServiceInjection;\n\nclass Controller\n{\n    \/**\n     * Controller constructor.\n     *\/\n    public function __construct()\n    {\n    }\n\n    public function action()\n    {\n        $service->process($order);\n    }\n}\n\nclass Service\n{\n    public function process(Order $order)\n    {\n        \/\/ =^_^= \\\\\n    }\n}\n\nclass Order {}",
-            "targetCode": "<?php\nnamespace ServiceInjection;\n\nclass Controller\n{\n    \/** @var Service *\/\n    private $service;\n\n    \/**\n     * Controller constructor.\n     * @param Service $service\n     *\/\n    public function __construct(Service $service)\n    {\n        $this->service = $service;\n    }\n\n    public function action($order)\n    {\n        $this->service->process($order);\n    }\n}\n\nclass Service\n{\n    public function process(Order $order)\n    {\n        \/\/ =^_^= \\\\\n    }\n}\n\nclass Order {}",
+            "initialCode": "<?php\nnamespace ServiceInjection;\n\nclass Controller\n{\n    \/**\n     * Controller constructor.\n     *\/\n    public function __construct()\n    {\n    }\n\n    public function action()\n    {\n        $service->process($order);\n    }\n}\n\nclass Service\n{\n    public function process(Order $order)\n    {\n        \/\/ =^_^= \\\\\n    }\n}\n\nclass Order\n{\n}",
+            "targetCode": "<?php\nnamespace ServiceInjection;\n\nclass Controller\n{\n    \/** @var Service *\/\n    private $service;\n\n    \/**\n     * Controller constructor.\n     * @param Service $service\n     *\/\n    public function __construct(Service $service)\n    {\n        $this->service = $service;\n    }\n\n    public function action($order)\n    {\n        $this->service->process($order);\n    }\n}\n\nclass Service\n{\n    public function process(Order $order)\n    {\n        \/\/ =^_^= \\\\\n    }\n}\n\nclass Order\n{\n}",
             "initialOffset": 197
         }
     ]

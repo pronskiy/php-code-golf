@@ -29,4 +29,6 @@ class Service
     }
 }
 
-class Order {}
+class Order
+{
+}

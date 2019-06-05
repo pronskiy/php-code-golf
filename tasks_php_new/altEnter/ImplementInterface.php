@@ -9,7 +9,7 @@ interface WorldSaver
     public function implementUsersDreams();
 }
 
-class Developer implements WorldSaver/*caret*/
+class Developer implements /*caret*/
 {
 
 }
