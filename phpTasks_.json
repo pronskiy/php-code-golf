@@ -2,24 +2,6 @@
     "tasks": [
         {
             "authorLogin": "lene",
-            "taskId": "0-0",
-            "taskName": "Simple: Reuse result",
-            "fileName": "ReuseResult.php",
-            "initialCode": "<?php\n\n$title = getSizeOfBasket() . \" inside\";\n$description = \"There are \" . getSizeOfBasket() . \"in your basket\";\n$promo = \"You have \" . getSizeOfBasket() . \" in your basket. \n    Buy 1 more and get 10% discount!\";\n\nfunction getSizeOfBasket()\n{\n    return sizeof(array(\"Chips\", \"Juice\", \"Ice-cream\"));\n}",
-            "targetCode": "<?php\n\n$size = getSizeOfBasket();\n$title = $size . \" inside\";\n$description = \"There are \" . $size . \"in your basket\";\n$promo = \"You have \" . $size . \" in your basket. \n    Buy 1 more and get 10% discount!\";\n\nfunction getSizeOfBasket()\n{\n    return sizeof(array(\"Chips\", \"Juice\", \"Ice-cream\"));\n}",
-            "initialOffset": 16
-        },
-        {
-            "authorLogin": "lene",
-            "taskId": "0-1",
-            "taskName": "Simple: Generate method",
-            "fileName": "GenerateMethod.php",
-            "initialCode": "<?php\n\nclass Printer\n{\n    public function printGreeting(string $name)\n    {\n        $this->printText(\"Hello, \" . $name);\n    }\n}",
-            "targetCode": "<?php\n\nclass Printer\n{\n    public function printGreeting(string $name)\n    {\n        $this->printText(\"Hello, \" . $name);\n    }\n\n    private function printText(string $string)\n    {\n        echo $string;\n    }\n}",
-            "initialOffset": 92
-        },
-        {
-            "authorLogin": "lene",
             "taskId": "0-2",
             "taskName": "Simple: Implement interface",
             "fileName": "ImplementInterface.php",
@@ -64,9 +46,18 @@
             "initialOffset": 115
         },
         {
+            "authorLogin": "lene",
+            "taskId": "0-6-1",
+            "taskName": "Simple: Reuse result",
+            "fileName": "ReuseResult.php",
+            "initialCode": "<?php\n\n$title = getSizeOfBasket() . \" inside\";\n$description = \"There are \" . getSizeOfBasket() . \"in your basket\";\n$promo = \"You have \" . getSizeOfBasket() . \" in your basket. \n    Buy 1 more and get 10% discount!\";\n\nfunction getSizeOfBasket()\n{\n    return sizeof(array(\"Chips\", \"Juice\", \"Ice-cream\"));\n}",
+            "targetCode": "<?php\n\n$size = getSizeOfBasket();\n$title = $size . \" inside\";\n$description = \"There are \" . $size . \"in your basket\";\n$promo = \"You have \" . $size . \" in your basket. \n    Buy 1 more and get 10% discount!\";\n\nfunction getSizeOfBasket()\n{\n    return sizeof(array(\"Chips\", \"Juice\", \"Ice-cream\"));\n}",
+            "initialOffset": 16
+        },
+        {
             "authorLogin": "pronskiy",
             "taskId": "0-7",
-            "taskName": "Simple: HTTP Request",
+            "taskName": "Simple: HTTP request",
             "fileName": "GetRequest.http",
             "initialCode": "",
             "targetCode": "GET http:\/\/httpbin.org\/uuid\nAccept: application\/json\n\n###",
@@ -92,7 +83,7 @@
         },
         {
             "authorLogin": "lene",
-            "taskId": "0-20",
+            "taskId": "0-10",
             "taskName": "Simple: Introduce new parameter",
             "fileName": "NewParameter.php",
             "initialCode": "<?php\n\nnamespace Importer {\n    class Importer\n    {\n        public function __construct(\\Importable\\ImportMe $class)\n        {\n        }\n    }\n}\n\n\nnamespace Importable {\n    class ImportMe\n    {\n\n    }\n}",
@@ -100,9 +91,18 @@
             "initialOffset": 101
         },
         {
+            "authorLogin": "lene&kirill",
+            "taskId": "0-12",
+            "taskName": "Simple: Replacing competion",
+            "fileName": "ReplacingCompletion.php",
+            "initialCode": "<?php\n\nvar_dump('Tab me');",
+            "targetCode": "<?php\n\nvar_export('Tab me');",
+            "initialOffset": 11
+        },
+        {
             "authorLogin": "pronskiy",
             "taskId": "0-21",
-            "taskName": "Medium: String Juggling",
+            "taskName": "Medium: String juggling",
             "fileName": "StringJuggling.php",
             "initialCode": "<?php\n\necho 'There are 5 monkeys in the tree.';\n\necho sprintf('The %2$s contains %1$d monkeys.\nThat\\'s a nice %2$s full of %1$d monkeys.', $num, $location);",
             "targetCode": "<?php\n\n$num = '5';\n$location = 'tree';\necho sprintf(\"There are %s monkeys in the %s.\", $num, $location);\n\necho \"The {$location} contains {$num} monkeys.\nThat's a nice {$location} full of {$num} monkeys.\";",
@@ -120,7 +120,7 @@
         {
             "authorLogin": "pronskiy",
             "taskId": "0-23",
-            "taskName": "Medium: Service Injection",
+            "taskName": "Medium: Service injection",
             "fileName": "ServiceInjection.php",
             "initialCode": "<?php\nnamespace ServiceInjection;\n\nclass Controller\n{\n    \/**\n     * Controller constructor.\n     *\/\n    public function __construct()\n    {\n    }\n\n    public function action()\n    {\n        $service->process($order);\n    }\n}\n\nclass Service\n{\n    public function process(Order $order)\n    {\n        \/\/ =^_^= \\\\\n    }\n}\n\nclass Order\n{\n}",
             "targetCode": "<?php\nnamespace ServiceInjection;\n\nclass Controller\n{\n    \/** @var Service *\/\n    private $service;\n\n    \/**\n     * Controller constructor.\n     * @param Service $service\n     *\/\n    public function __construct(Service $service)\n    {\n        $this->service = $service;\n    }\n\n    public function action($order)\n    {\n        $this->service->process($order);\n    }\n}\n\nclass Service\n{\n    public function process(Order $order)\n    {\n        \/\/ =^_^= \\\\\n    }\n}\n\nclass Order\n{\n}",
